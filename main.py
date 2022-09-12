@@ -1,14 +1,15 @@
 from turtle import Turtle, Screen
 
-turtle = Turtle()
-turtle.shape("turtle")
-turtle.color("red")
+jimmy = Turtle()
+jimmy.shape("turtle")
+jimmy.color("red")
 
-for _ in range(4):
-    turtle.forward(180)
-    turtle.right(90)
-
-
+for x in range(50):
+    jimmy.forward(10)
+    if jimmy.isdown():
+        jimmy.penup()
+    else:
+        jimmy.pendown()
 
 screen = Screen()
 screen.exitonclick()
