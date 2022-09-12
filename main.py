@@ -1,15 +1,13 @@
 from turtle import Turtle, Screen
 
 jimmy = Turtle()
-jimmy.shape("turtle")
-jimmy.color("red")
 
-for x in range(50):
-    jimmy.forward(10)
-    if jimmy.isdown():
-        jimmy.penup()
-    else:
-        jimmy.pendown()
+for corners in range(3, 10):
+    turn = 360 / corners
+
+    for x in range(corners):
+        jimmy.forward(100)
+        jimmy.right(turn)
 
 screen = Screen()
 screen.exitonclick()
