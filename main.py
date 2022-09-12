@@ -10,15 +10,18 @@ def change_color(turtle):
     g = random.random()
     turtle.color(r, b, g)
 
+def draw_shape(sides, turtle):
+    change_color(turtle)
+    turn = 360 / sides
 
-for corners in range(3, 10):
-    turn = 360 / corners
+    for _ in range(sides):
+        turtle.forward(100)
+        turtle.right(turn)
 
-    for x in range(corners):
-        jimmy.forward(100)
-        jimmy.right(turn)
 
-    change_color(jimmy)
+for sides in range(3, 11):
+    draw_shape(sides, jimmy)
+
 
 screen = Screen()
 screen.exitonclick()
