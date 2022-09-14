@@ -27,10 +27,21 @@ def random_walk(turtle):
     turtle.setheading(random.choice(turns))
 
 
+def spirograph(turtle):
+    turtle.speed(10)
+    for x in range(18):
+        turtle.pencolor(random_colour())
+        turtle.circle(80)
+        turtle.right(20)
+
+
+spirograph(jimmy)
+
 # for x in range(3, 11):
 #     draw_shape(x, jimmy)
-while True:
-    random_walk(jimmy)
+
+# while True:
+#     random_walk(jimmy)
 
 
 screen = Screen()
