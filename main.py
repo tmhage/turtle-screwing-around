@@ -27,15 +27,15 @@ def random_walk(turtle):
     turtle.setheading(random.choice(turns))
 
 
-def spirograph(turtle):
-    turtle.speed(10)
-    for x in range(18):
+def spirograph(turtle, gap_size):
+    turtle.speed("fastest")
+    for x in range(int(360 / gap_size)):
         turtle.pencolor(random_colour())
-        turtle.circle(80)
-        turtle.right(20)
+        turtle.circle(100)
+        turtle.right(gap_size)
 
 
-spirograph(jimmy)
+spirograph(jimmy, 5)
 
 # for x in range(3, 11):
 #     draw_shape(x, jimmy)
