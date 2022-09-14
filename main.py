@@ -4,15 +4,15 @@ import random
 jimmy = Turtle()
 
 
-def change_color(turtle):
+def random_colour():
     r = random.random()
-    b = random.random()
     g = random.random()
-    turtle.color(r, b, g)
+    b = random.random()
+    return r, g, b
 
 
 def draw_shape(sides, turtle):
-    change_color(turtle)
+    turtle.pencolor(random_colour())
     turn = 360 / sides
 
     for _ in range(sides):
@@ -21,7 +21,7 @@ def draw_shape(sides, turtle):
 
 
 def random_walk(turtle):
-    change_color(turtle)
+    turtle.pencolor(random_colour())
     turtle.forward(10)
     turns = [0, 90, 180, 270]
     turtle.setheading(random.choice(turns))
